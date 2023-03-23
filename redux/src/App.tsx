@@ -2,6 +2,17 @@ import { createSlice, configureStore } from '@reduxjs/toolkit';
 import React from 'react';
 import { Provider, useDispatch, useSelector } from 'react-redux';
 
+const titleSlice = createSlice({
+  name: 'titleSlice',
+  initialState: {
+    title: 'App Redux',
+  },
+  reducers: {
+
+  },
+});
+const titleReducer = titleSlice.reducer;
+
 const valueSlice = createSlice({
   name: 'valueSlice',
   initialState: {
@@ -24,6 +35,7 @@ const valueReducer = valueSlice.reducer;
 const store = configureStore({
   reducer: {
     valueReducer,
+    titleReducer
   },
 });
 
@@ -95,7 +107,13 @@ const ContentContainer = () => {
 };
 
 const Title = () => {
-  return <h5>App</h5>
+  // render all
+  // const title: any = useSelector((state: any) => state);
+
+  // FIx
+  const title: any = useSelector((state: any) => state.titleReducer);
+
+  return <h5>{title.title}</h5>
 }
 
 
