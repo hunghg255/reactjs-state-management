@@ -67,11 +67,15 @@ const ContentContainer = () => {
   );
 };
 
+const Title = () => {
+  return <h5>App</h5>
+}
+
 function App() {
   return (
     <RecoilRoot>
       <div className='container'>
-        <h5>App</h5>
+        <Title />
         <ContentContainer />
       </div>
     </RecoilRoot>

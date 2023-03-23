@@ -64,6 +64,10 @@ const ContentContainer = memo(() => {
   );
 });
 
+const Title = () => {
+  return <h5>App</h5>
+}
+
 function App() {
   const store = useState({
     first: "",
@@ -73,7 +77,7 @@ function App() {
   return (
     <StoreContext.Provider value={store}>
       <div className="container">
-        <h5>App</h5>
+        <Title />
         <ContentContainer />
       </div>
     </StoreContext.Provider>

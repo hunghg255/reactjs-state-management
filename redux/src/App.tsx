@@ -94,11 +94,16 @@ const ContentContainer = () => {
   );
 };
 
+const Title = () => {
+  return <h5>App</h5>
+}
+
+
 function App() {
   return (
     <Provider store={store}>
       <div className='container'>
-        <h5>App</h5>
+        <Title />
         <ContentContainer />
       </div>
     </Provider>
